@@ -10,7 +10,7 @@
     />
     <link href="/public/style.css" rel="stylesheet" type="text/css" />
   </head>
-
+  
   <body>
     <h1>URL Shortener Microservice</h1>
     <main>
@@ -19,13 +19,23 @@
           <fieldset>
             <legend>URL Shortener</legend>
             <label for="url_input">URL:</label>
-            <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" /> <br>
+            <input id="url_input" type="text" name="originalUrl" placeholder="https://www.freecodecamp.org/" /> <br>
             <label for="url_short_input">URL acortado:</label>
-            <input id="url_short_input" type="text" name="url_short" placeholder="freecodecamp" />
+            <input id="url_short_input" type="text" name="shortUrl" placeholder="freecodecamp" /> <br>
             <input type="submit" value="POST URL" />
           </fieldset>
         </form>
       </section>
+      <div class="urls">
+        <fieldset id="lista_urls">
+          <legend>Urls acortadas</legend>
+          {{#each urls}}
+            <div>
+              <a href={{originalUrl}}>{{shortUrl}}</a>
+            </div>
+          {{/each}}
+        </fieldset>
+      </div>
     </main>
     <footer>
       <p>By <a href="https://www.freecodecamp.org/">freeCodeCamp</a></p>

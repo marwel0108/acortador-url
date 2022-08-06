@@ -44,3 +44,9 @@ input[type='text'] {
   width: 220px;
   text-align: center;
 }
+
+.urls {
+  margin: 10px auto;
+  padding: 20px;
+  max-width: 600px;
+}

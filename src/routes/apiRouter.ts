@@ -1,8 +1,9 @@
 import { Router  } from "express";
-import { hello } from '../controllers/api.controllers';
+import { shortUrl, getUrl } from '../controllers/api.controllers';
 
 const apiRouter: Router = Router();
 
-apiRouter.get('/hello', hello);
+apiRouter.get('/:url', getUrl)
+apiRouter.post('/shorturl', shortUrl);
 
 export default apiRouter;
